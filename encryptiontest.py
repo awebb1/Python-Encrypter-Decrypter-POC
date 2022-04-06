@@ -134,15 +134,15 @@ def mix(encrypted):
 		if index > index_length:
 			break
 
-		if index + 1 >= index_length:
+		if index + 1 > index_length:
 			break
 		mixing_bowl[index + 1] = [mixing_bowl[index+1][1], mixing_bowl[index+1][2], mixing_bowl[index+1][3], mixing_bowl[index+1][0]]
 
-		if index + 2 >= index_length:
+		if index + 2 > index_length:
 			break
 		mixing_bowl[index + 2] = [mixing_bowl[index+2][2], mixing_bowl[index+2][3], mixing_bowl[index+2][0], mixing_bowl[index+2][1]]
 
-		if index + 3 >= index_length:
+		if index + 3 > index_length:
 			break
 		mixing_bowl[index + 3] = [mixing_bowl[index+3][3], mixing_bowl[index+3][0], mixing_bowl[index+3][1], mixing_bowl[index+3][2]]
 
@@ -197,24 +197,24 @@ def reverse_mix(decrypted):
 
 	for i in range(len(fixing_bowl)):	
 
-		if index > index_length:
+		if index >= index_length:
 			break
 
 		fixed_input += fixing_bowl[index][0] + fixing_bowl[index][1] + fixing_bowl[index][2] + fixing_bowl[index][3]
 
-		if index + 1 >= index_length:
+		if index + 1 > index_length:
 			break
 		fixing_bowl[index + 1] = [fixing_bowl[index+1][3], fixing_bowl[index+1][0], fixing_bowl[index+1][1], fixing_bowl[index+1][2]]
 
 		fixed_input += fixing_bowl[index+1][0] + fixing_bowl[index+1][1] + fixing_bowl[index+1][2] + fixing_bowl[index+1][3]
 
-		if index + 2 >= index_length:
+		if index + 2 > index_length:
 			break
 		fixing_bowl[index + 2] = [fixing_bowl[index+2][2], fixing_bowl[index+2][3], fixing_bowl[index+2][0], fixing_bowl[index+2][1]]
 
 		fixed_input += fixing_bowl[index+2][0] + fixing_bowl[index+2][1] + fixing_bowl[index+2][2] + fixing_bowl[index+2][3]
 
-		if index + 3 >= index_length:
+		if index + 3 > index_length:
 			break
 		fixing_bowl[index + 3] = [fixing_bowl[index+3][1], fixing_bowl[index+3][2], fixing_bowl[index+3][3], fixing_bowl[index+3][0]]
 
@@ -233,7 +233,7 @@ def reverse_mix(decrypted):
 
 
 
-input_text = 'WOO! TEST STRING BABY IN AND OUT LET\'S GO!!!!!!!'
+input_text = 'WOO! TEST STRING BABY IN AND OUT LET\'S GO!!!!'
 
 
 key = create_key()
